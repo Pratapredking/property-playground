@@ -43,4 +43,6 @@ npm i react-spinners
 
 npm i mongodb mongoose
 
+npm install next-auth
+
 ```

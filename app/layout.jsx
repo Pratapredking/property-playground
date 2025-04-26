@@ -2,11 +2,13 @@
 import Navbar from "@/component/Navbar";
 import "./globals.css";
 import Footer from "@/component/Footer";
-
+import AuthProvider from "@/component/AuthProvider";
+ 
 
 
 const MainLayout = ({children}) => {
   return (
+    <AuthProvider>
     <html lang="en">
       <body>
         <Navbar/>
@@ -14,6 +16,7 @@ const MainLayout = ({children}) => {
         <Footer/>
       </body>
     </html>
+    </AuthProvider>
   );
 };
 
