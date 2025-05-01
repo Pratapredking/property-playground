@@ -1,7 +1,11 @@
+'use client'
+
+import addProperty from "/app/actions/addproperty";
+
 
 const PropertyAddForm = () => {
     return (
-        <form>
+        <form action={addProperty}>
             <h2 className="text-3xl text-center font-semibold mb-6">
               Add Property
             </h2>
@@ -12,7 +16,7 @@ const PropertyAddForm = () => {
               >
               <select
                 id="type"
-                name="type"
+                name="type"   
                 className="border rounded w-full py-2 px-3"
                 required
               >
