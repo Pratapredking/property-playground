@@ -45,4 +45,6 @@ npm i mongodb mongoose
 
 npm install next-auth
 
+npm i cloudinary
+
 ```
