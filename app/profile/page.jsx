@@ -17,7 +17,7 @@ const ProfilePage = async () => {
   }
 
   const properties = await Property.find({owner: userId}).lean();
-  console.log(properties);
+  // console.log(properties);
 
   return (
      <section className="bg-blue-50">
