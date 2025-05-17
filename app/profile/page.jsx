@@ -4,6 +4,8 @@ import Property from "@/models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 import profileDefault from '@/assets/images/profile.png';
 import ProfileProperties from "@/component/ProfileProperties";
+import { convertToSerializeableObject } from "@/utils/convertToObject";
+
 
 const ProfilePage = async () => {
   await connectDB();
@@ -16,7 +18,10 @@ const ProfilePage = async () => {
     throw new Error('User Id is required')
   }
 
-  const properties = await Property.find({owner: userId}).lean();
+  const propertiesDocs = await Property.find({owner: userId}).lean();
+
+  const properties = propertiesDocs.map(convertToSerializeableObject);
+
   // console.log(properties);
 
   return (
